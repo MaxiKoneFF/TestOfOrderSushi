@@ -1,11 +1,10 @@
 package AuthorizationTest.authorizationService;
 
-import AuthomatizationTest.authomatizationServise.AuthomatizationServise;
-
 import static com.codeborne.selenide.Selenide.open;
 
-public class AuthorizationService extends AuthomatizationServise {
-    public void openBaseUrl() {
-        open(baseUrl + "/login");
+public class AuthorizationService {
+    public String loginUrl = "https://sushi-karate.ru/login";
+    public void oprnLoginUrl() {
+        open(loginUrl);
     }
 }

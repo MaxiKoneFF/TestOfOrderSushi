@@ -1,6 +1,5 @@
 package AuthorizationTest.authorizationTest;
 
-
 import AuthorizationTest.authorizationPage.AuthorizationPage;
 import AuthorizationTest.authorizationService.AuthorizationService;
 import org.testng.annotations.Test;
@@ -14,10 +13,11 @@ public class AuthorizationTest {
         String telephoneNomber = "9867483424";
         String password = "94949697";
 
-        aithorizationServise.openBaseUrl();
-        authorizationPage.telefoneNumberLine(telephoneNomber);
-        authorizationPage.passwordLine(password);
+        aithorizationServise.oprnLoginUrl();
+        authorizationPage.selectCiti();
+        authorizationPage.enterTelephoneNomber(telephoneNomber);
+        authorizationPage.enterPassword(password);
         authorizationPage.getEnterButton();
-        authorizationPage.getOrdersButton();
+        authorizationPage.getOrderButton();
     }
 }
