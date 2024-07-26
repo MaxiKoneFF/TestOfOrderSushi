@@ -6,31 +6,31 @@ import org.openqa.selenium.By;
 import static com.codeborne.selenide.Selenide.element;
 
 public class AuthomatizationPage {
-    private final By Menu_Button = By.xpath("//a[contains(text(), 'Меню')]");
-    private final By Set_Button = By.xpath("//*[contains(text(), 'Сеты')]");
-    private final By Choose_Set = By.xpath("//a[contains(text(), 'сет Ажиотаж')]");
-    private final By Order_Button = By.xpath("//button[contains(text(), 'Заказать')]");
+    private final By MENU_BUTTON = By.xpath("//a[contains(text(), 'Меню')]");
+    private final By SET_BUTTON = By.xpath("//*[contains(text(), 'Сеты')]");
+    private final By CHOOSE_SET = By.xpath("//a[contains(text(), 'сет Ажиотаж')]");
+    private final By ORDER_BUTTON = By.xpath("//button[contains(text(), 'Заказать')]");
 
     public SelenideElement menuButton(){
-        return element (Menu_Button);
+        return element (MENU_BUTTON);
     }
     public void getMenuButton(){
         menuButton().click();
     }
     public SelenideElement setButton() {
-        return element (Set_Button);
+        return element (SET_BUTTON);
     }
     public void getSetButton() {
         setButton().click();
     }
     public SelenideElement chooseSet(){
-        return element (Choose_Set);
+        return element (CHOOSE_SET);
     }
     public void getChoose_Set(){
         chooseSet().click();
     }
     public SelenideElement orderButton(){
-        return element (Order_Button);
+        return element (ORDER_BUTTON);
     }
     public void getOrderButton(){
         orderButton().click();
