@@ -6,20 +6,19 @@ import org.openqa.selenium.By;
 import static com.codeborne.selenide.Selenide.element;
 
 public class AuthorizationPage {
-    private final By City_Selector = By.xpath("//*[contains(text(), 'Нижний Новгород')]");
-    private final By TelephoneNomber = By.xpath("//input[@name = 'login']");
-    private final By Password = By.xpath("//input[@name = 'password']");
-    private final By Enter_Button = By.xpath("//button[contains(text(),'Войти')]");
-    private final By Order_Button = By.xpath("//*[@class = 'tabs2-nav-item current']");
+    private final By CITY_SELECTOR = By.xpath("//*[contains(text(), 'Нижний Новгород')]");
+    private final By TELEPHONE_NOMB = By.xpath("//input[@name = 'login']");
+    private final By PASSWORD = By.xpath("//input[@name = 'password']");
+    private final By ENTER_BUTTON = By.xpath("//button[contains(text(),'Войти')]");
+    private final By ORDER_BUTTON = By.xpath("//*[@class = 'tabs2-nav-item current']");
 
     public SelenideElement city() {
-        return element(City_Selector);
+        return element(CITY_SELECTOR);
     }
     public void selectCiti() {
         city().click();
     }
-    public SelenideElement telefoneNumberLine() {
-        return element(TelephoneNomber);
+    public SelenideElement telefoneNumberLine() {return element(TELEPHONE_NOMB);
     }
     public void enterTelephoneNomber(String telephoneNomber) {
         telefoneNumberLine().setValue(telephoneNomber);
@@ -31,7 +30,7 @@ public class AuthorizationPage {
         }
     }
     public SelenideElement passwordLine() {
-        return element(Password);
+        return element(PASSWORD);
     }
     public void enterPassword(String password) {
         passwordLine().setValue(password);
@@ -42,13 +41,13 @@ public class AuthorizationPage {
         }
     }
     public SelenideElement enterButton() {
-        return element(Enter_Button);
+        return element(ENTER_BUTTON);
     }
     public void getEnterButton() {
         enterButton().click();
     }
     public SelenideElement ordersButton() {
-        return element(Order_Button);
+        return element(ORDER_BUTTON);
     }
     public void getOrderButton() {
         ordersButton().click();
